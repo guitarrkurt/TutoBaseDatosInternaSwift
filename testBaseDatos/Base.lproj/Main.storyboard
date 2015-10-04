@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="DLF-Ga-tdP">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Table View Controller-->
+        <scene sceneID="Qeu-fd-8mh">
+            <objects>
+                <tableViewController id="DLF-Ga-tdP" customClass="MyTableViewController" customModule="testBaseDatos" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="143" sectionHeaderHeight="22" sectionFooterHeight="22" id="Xxt-wz-TOA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="143" id="Qhk-TC-0yu" customClass="MyTableViewCell" customModule="testBaseDatos" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qhk-TC-0yu" id="OGD-ap-sei">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWw-MX-csP">
+                                            <rect key="frame" x="1" y="8" width="598" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="iCf-M5-Zud"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Salario:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x13-wh-6Yv">
+                                            <rect key="frame" x="1" y="37" width="598" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="HWw-MX-csP" firstAttribute="trailing" secondItem="x13-wh-6Yv" secondAttribute="trailing" id="43a-h0-QVA"/>
+                                        <constraint firstItem="HWw-MX-csP" firstAttribute="leading" secondItem="OGD-ap-sei" secondAttribute="leadingMargin" constant="-7" id="IMQ-7i-HzK"/>
+                                        <constraint firstItem="x13-wh-6Yv" firstAttribute="top" secondItem="HWw-MX-csP" secondAttribute="bottom" constant="8" symbolic="YES" id="ayl-6d-iu5"/>
+                                        <constraint firstItem="x13-wh-6Yv" firstAttribute="centerX" secondItem="OGD-ap-sei" secondAttribute="centerX" id="bge-cc-x4J"/>
+                                        <constraint firstItem="HWw-MX-csP" firstAttribute="top" secondItem="OGD-ap-sei" secondAttribute="topMargin" id="gS7-OA-UYc"/>
+                                        <constraint firstItem="HWw-MX-csP" firstAttribute="leading" secondItem="x13-wh-6Yv" secondAttribute="leading" id="rdg-dk-YMH"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="x13-wh-6Yv" secondAttribute="bottom" constant="76.5" id="yQp-lC-ceP"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="etiquetaNombre" destination="HWw-MX-csP" id="388-b6-fjh"/>
+                                    <outlet property="etiquetaSalario" destination="x13-wh-6Yv" id="rfJ-iA-pxW"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="DLF-Ga-tdP" id="RmT-GQ-Oe6"/>
+                            <outlet property="delegate" destination="DLF-Ga-tdP" id="pXG-80-1Ks"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w1K-Tk-PP3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="235" y="362"/>
+        </scene>
+    </scenes>
+</document>
